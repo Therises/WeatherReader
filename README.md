@@ -15,5 +15,6 @@ Assignment:
 * All code must be placed on the github or on the similar git repository.
 * All neccessary DB data for development should be placed in the seeds.rb file.
 * ADDITIONAL (would be a big plus): Project setup should be based on the Docker Compose. (place .env, .Dockerfile, docker-compose.yml files into the root of project)
+
 I've done almost all highlights, except tests and Docker integration.
 And due to certain force majeure overdue it by almost two weeks.
