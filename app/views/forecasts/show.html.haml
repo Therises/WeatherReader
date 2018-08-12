@@ -1,0 +1,13 @@
+%h1 My Forecasts
+%p= link_to 'Back', root_path, class: "btn btn-info"
+
+= form_with scope: :forecast, url: email_update_path, class: 'form-inline' do |f|
+  .form-group
+    = f.label :email
+    = f.email_field :email, id: 'email', class: "form-control"
+  .form-group
+    = f.submit 'Get updates', class: 'btn btn-default', id: 'submit-updates'
+
+%p= "There's no data about your forecasts or you didn't make any yet." unless @forecasts.any?
+- @forecasts.reverse_each do |forecast|
+  = render forecast

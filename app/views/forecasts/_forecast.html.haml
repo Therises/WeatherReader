@@ -1,0 +1,30 @@
+.well
+  %h3= forecast.city
+  %table.table.table-bordered
+    %tr
+      %th
+      %th Apixu
+      %th Darksky
+      %th Weatherbit
+    %tr
+      %td Max Temperature (°C)
+      %td= forecast.max_temp[0] if forecast.max_temp
+      %td= forecast.max_temp[1] if forecast.max_temp
+      %td= forecast.max_temp[2] if forecast.max_temp
+    %tr
+      %td Min Temperature (°C)
+      %td= forecast.min_temp[0] if forecast.min_temp
+      %td= forecast.min_temp[1] if forecast.min_temp
+      %td= forecast.min_temp[2] if forecast.min_temp
+    %tr
+      %td Precipitation Probability (%)
+      %td= forecast.precipitation[0] if forecast.precipitation
+      %td= forecast.precipitation[1] if forecast.precipitation
+      %td= forecast.precipitation[2] if forecast.precipitation
+    %tr
+      %td Weather Conditions
+      %td= forecast.condition[0].humanize if forecast.condition
+      %td= forecast.condition[1].humanize if forecast.condition
+      %td= forecast.condition[2].humanize if forecast.condition
+  %p= 'Forecast is made on: ' + forecast.created_at.getlocal.strftime('%A, %d %B %Y %H:%M:%S')
+  %p= 'Forecast is made for: ' + forecast.created_at.getlocal.tomorrow.strftime('%A, %d %B %Y')

@@ -1,0 +1,15 @@
+%h1 Forecasts
+%p= link_to 'My Forecasts', my_forecasts_path, class: "btn btn-info" if @forecasts.any? 
+%p= link_to 'Get my location', usrloc_path, remote: true, class: "btn btn-default"
+.form-wrap
+  = form_with scope: :forecast, url: forecasts_path, method: :post, class: 'form-inline'  do |f|
+    .form-group
+      = f.label :city
+      = f.text_field :city, id: 'location', class: "form-control", required: true
+    .form-group
+      = f.submit 'Get forecast', class: 'btn btn-default', id: 'submit-location'
+
+- unless @forecasts.empty?
+  #forecasts
+    - @forecasts.reverse_each do |forecast|
+      = render forecast

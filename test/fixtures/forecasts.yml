@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  city: MyString
+  condition: MyString
+  max_temp: MyString
+  min_temp: MyString
+  precipitation: MyString
+  user_id: MyString
+
+two:
+  city: MyString
+  condition: MyString
+  max_temp: MyString
+  min_temp: MyString
+  precipitation: MyString
+  user_id: MyString
