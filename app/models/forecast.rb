@@ -55,12 +55,6 @@ class Forecast < ApplicationRecord
         @darksky_data['temperatureHigh'],
         @weatherbit_data['max_temp']
       ]
-  
-      @max_temp = [
-        @apixu_data['maxtemp_c'],
-        @darksky_data['temperatureHigh'],
-        @weatherbit_data['max_temp']
-      ]
       @min_temp = [
         @apixu_data['mintemp_c'],
         @darksky_data['temperatureLow'],
